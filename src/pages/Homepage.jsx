@@ -7,8 +7,7 @@ import PortfolioSection from '../components/Homepage components/PortfolioSection
 import Testimonials from '../components/Homepage components/Testimonials'
 import ContactSmall from '../components/Homepage components/ContactSmall'
 import Footer from '../components/Footer'
-import Sidebar from '../components/sidebar'
-
+import Sidebar from "../components/Sidebar"
 const Homepage = () => {
 
     const [viewPortWidth, setViewPortWidth] = useState(window.innerWidth);
