@@ -15,12 +15,11 @@
 
 .wave-desktop {
     position: absolute;
-    bottom: 0;
+    bottom: -1px;
     left: 0;
     width: 100%;
-    mix-blend-mode: multiply;
     z-index: 0;
-
+    mix-blend-mode: multiply;
 }
 
 .hero-section .hero-content {
@@ -75,37 +74,6 @@
 
 .hero-section .hero-content .actions .btn-secondary:hover {
     background-color: #f0f0f0;
-}
-
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 50px;
-    width: 100%;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 1000;
-    font-family: "Poppins", sans-serif;
-    background-color: rgba(255, 255, 255, 0.1);
-}
-
-.navbar .nav-links {
-    display: flex;
-    gap: 20px;
-}
-
-.navbar .nav-links a {
-    text-decoration: none;
-    color: var(--primary-color);
-    font-weight: 500;
-    transition: color 0.3s ease;
-}
-
-.navbar .nav-links a:hover {
-    color: var(--secondary-color);
 }
 
 
@@ -178,9 +146,9 @@
 
 .wave-services {
     width: 100%;
-    mix-blend-mode: multiply;
     z-index: 0;
     position: absolute;
+    top:-1px;
 }
 
 .servicessection .services-card-container {
@@ -273,6 +241,7 @@
     gap: 20px;
     max-width: 1200px;
     margin: 0 auto;
+    padding:10px;
 }
 
 .portfolio-image {
@@ -303,7 +272,7 @@
     width: 100%;
     z-index: 0;
     position: absolute;
-    top: 800px;
+    top: 99.9%;
 }
 
 .testimonialsSection {
@@ -364,6 +333,7 @@
 
 .contact-small {
     margin-top: 120px;
+    z-index:5;
 }
 
 .contact-small h1 {
@@ -384,6 +354,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    flex-wrap:wrap;
 }
 
 .contact-small .contact-small-container a {
@@ -408,14 +379,109 @@
 }
 
 /* Responsive Adjustments */
+@media (max-width: 1100px) {
+   .contact-small .contact-small-container {
+        padding:20px;
+    }
+    .aboutsection {
+        padding:20px;
+    }
+}
+@media (max-width: 940px) {
+    .nav-links {
+        width:90%;
+    }
+    .hero-section .hero-content h1 {
+        font-size:100px;
+        text-align:center;
+    }
+}
 @media (max-width: 900px) {
     .portfolio-card-container {
-        grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+        grid-template-columns: 1fr;
+        padding:20px;
+    }
+   .servicessection  .services-card-container {
+        padding:20px;
+    }
+}
+@media (max-width: 740px) {
+    .aboutsection .aboutsection-left h3 {
+        font-size:18px;
+    }
+    .aboutsection .aboutsection-right a.about-link {
+        font-size:18px;
     }
 }
 
 @media (max-width: 600px) {
-    .portfolio-card-container {
-        grid-template-columns: 1fr;
+    .hero-section .hero-content h1 {
+        font-size: 70px;
+    }
+    .hero-section .hero-content h2 {
+        font-size:22px;
+    }
+    .nav-links {
+        display:none;
+    }
+    .aboutsection {
+        flex-direction: column;
+    }
+    .aboutsection .aboutsection-left {
+        justify-content: center;
+    }
+    .servicessection .services h1, .portfolioSection h1, .testimonialsSection h1, .contact-small h1 {
+        font-size:50px;
+    }
+    .servicessection .services h2, .portfolioSection h2, .testimonialsSection h2, .contact-small h2  {
+        font-size:18px;
+        padding: 0 5px;
+    }
+
+}
+@media (max-width: 420px) {
+    .hero-section {
+        height: 80vh;
+    }
+    .hero-section .hero-content {
+        padding:10px;
+    }
+    .hero-section .hero-content h1 {
+        font-size:60px;
+    }
+    .hero-section .hero-content h2 {
+        font-size: 18px;
+        padding: 10px;
+    }
+    .hero-section .hero-content .actions {
+        margin: 10px 0 ;
+    }
+    .hero-section .hero-content .actions button, .portfolioSection button {
+        font-size:16px;
+        padding: 10px;
+    }
+    .servicessection .services h1, .portfolioSection h1, .testimonialsSection h1, .contact-small h1 {
+        font-size:40px;
+    }
+    .servicessection .services h2, .portfolioSection h2, .testimonialsSection h2, .contact-small h2 {
+        font-size:16px;
+    }
+    .servicessection  .services-card-container {
+        padding:10px 5px;
+    }
+    .servicessection  .services-card-container .services-card {
+        width:100%;
+    }
+    .servicessection button {
+        font-size:16px;
+    }
+    .testimonials-container {
+        padding:5px;
+    }
+    .testimonialsSection h2 {
+        padding-top:10px;
+    }
+    .contact-small .contact-small-container {
+        gap:20px;
     }
 }
