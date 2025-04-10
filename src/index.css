@@ -38,104 +38,208 @@ span {
   background-color: #380060;
   color: white;
   padding: 20px;
-  display:flex;
+  display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   font-family: "Space Grotesk", sans-serif
 }
+
 .footer .logo {
-  font-size:30px;
+  font-size: 30px;
   text-decoration: none;
   padding: 10px 0;
-  color:white;
+  color: white;
 }
+
 .footer h3 {
-  padding-bottom:20px;
+  padding-bottom: 20px;
 }
+
 .footer .footer-links {
-  display:flex;
-  flex-wrap:wrap;
-  padding-bottom:10px;
+  display: flex;
+  flex-wrap: wrap;
+  padding-bottom: 10px;
 }
+
 .footer .footer-links a {
   text-decoration: none;
   padding: 0 10px;
-  font-size:18px;
-  color:white;
+  font-size: 18px;
+  color: white;
   transition: 0.3s;
 }
+
 .footer .footer-links a:hover {
-  color:#9103f6;
+  color: #9103f6;
 }
+
 .footer .social-links {
-  display:flex;
-  gap:20px;
+  display: flex;
+  gap: 20px;
   font-size: 30px;
-  padding:12px 0 ;
-  cursor:pointer;
+  padding: 12px 0;
+  cursor: pointer;
 }
-.footer .social-links > * {
+
+.footer .social-links>* {
   transition: 0.3s;
-  text-decoration:none;
-  color:white;
+  text-decoration: none;
+  color: white;
 }
-.footer .social-links > *:hover  {
-    color:#9103f6;
+
+.footer .social-links>*:hover {
+  color: #9103f6;
 }
 
 .navbar {
-  width:100%;
-  display:flex;
+  width: 100%;
+  display: flex;
   justify-content: center;
   align-items: center;
 }
+
 .nav-links {
   width: 60%;
-  display:flex;
+  display: flex;
   align-items: center;
   justify-content: center;
   background-color: #380060;
   border-bottom-left-radius: 40px;
   border-bottom-right-radius: 40px;
-  z-index:2;
+  z-index: 2;
 }
+
 .nav-links a {
   padding: 10px 30px;
   font-size: 18px;
   font-family: "Space Grotesk", sans-serif;
   text-decoration: none;
   color: white;
-  transition: 0.3s  ;
+  transition: 0.3s;
 }
+
 .nav-links a:hover {
   color: #9103f6;
 }
+
 .nav-links a.logo {
-  font-size:28px;
+  font-size: 28px;
 }
 
 
 .sidebar-nav {
-  width:100%;
-  display:flex;
+  width: 100%;
+  display: flex;
   align-items: center;
   justify-content: space-between;
-  padding:10px 50px;
+  padding: 10px 50px;
+  display: none;
+  background-color: #380060;
 }
+
 .sidebar-nav a {
-  text-decoration:none;
-  font-size:22px;
-  color:var(--primary-color);
-  font-family:"Space Grotesk", sans-serif;
-  z-index:999
+  text-decoration: none;
+  font-size: 22px;
+  color: var(--background-color);
+  font-family: "Space Grotesk", sans-serif;
+  z-index: 999
 }
+
 .sidebar-nav .sidebar-menu {
-  cursor:pointer;
+  cursor: pointer;
   transition: 0.3s;
 }
+
 .sidebar-nav .sidebar-menu {
-  color: #380060;
+  color: var(--background-color);
+}
+
+.sidebar-full {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background-color: #23013b;
+  z-index: 999;
+  transform: translateX(-100vw);
+  transition: 0.3s;
+  padding: 20px;
+  color: white;
+}
+
+
+.sidebar-full.opened {
+  transform: translateX(0);
+}
+
+.sidebar-full .head {
+  font-size: 24px;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
+
+.sidebar-full .title {
+  font-family: "Space Grotesk", sans-serif;
+  margin-top: 40px;
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+
+.sidebar-full .underline,
+.sidebar-full .underline2 {
+  width: 100%;
+  height: 2px;
+  background-color: rgba(255, 255, 255, 0.2);
+  margin-bottom: 20px;
+}
+
+.sidebar-full .underline2 {
+  margin-top: 20px;
+}
+
+.sidebar-full .menu {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  font-size: 20px;
+  font-family: "Poppins", sans-serif;
+  margin-top: 10px;
+}
+
+.sidebar-full .menu a {
+  text-decoration: none;
+  color: white;
+}
+
+.sidebar-full .contact h1 {
+  font-size: 30px;
+  font-family: "Space Grotesk", sans-serif;
+}
+
+.sidebar-full .contact {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.sidebar-full .contact a {
+  text-decoration: none;
+  color: white;
+  font-size: 16px;
+  display: flex;
+  gap: 10px;
+  font-family: "Poppins", sans-serif;
+}
+
+@media (max-width: 600px) {
+  .navbar {
+    display: none;
+  }
+
+  .sidebar-nav {
+    display: flex;
+  }
 }
 
 @media (max-width: 420px) {

@@ -10,24 +10,11 @@ import Footer from '../components/Footer'
 import Sidebar from "../components/Sidebar"
 const Homepage = () => {
 
-    const [viewPortWidth, setViewPortWidth] = useState(window.innerWidth);
-    
-        useEffect(() =>{
-            const handleResize = () =>{
-                setViewPortWidth(window.innerWidth);
-                console.log(viewPortWidth)
-            }
-    
-            window.addEventListener('resize', handleResize);
-    
-            window.removeEventListener('resize', handleResize)
-        }, [window.innerWidth])
 
     return (
         <div className="container">
-            {
-                viewPortWidth > 600 ? <Navbar /> : <Sidebar />
-            }
+            <Navbar />
+            <Sidebar />
             <HeroSection />
             <AboutSection />
             <ServicesSection />
